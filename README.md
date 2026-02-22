@@ -13,4 +13,4 @@
    4ans: we can easyly get value by using parent event delegation . it vary usefull;
    
 5. What is the difference between preventDefault() and stopPropagation() methods?
-   preventDefault() it use when we dont neew auto refresh browser ; stopPropagation() it use when we need stop parent coltrol by child then use it;
+   5ans::preventDefault() it use when we dont neew auto refresh browser ; stopPropagation() it use when we need stop parent coltrol by child then use it;

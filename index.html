@@ -1,0 +1,124 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <script src="https://cdn.jsdelivr.net/npm/@tailwindcss/browser@4"></script>
+    <link href="https://cdn.jsdelivr.net/npm/daisyui@5" rel="stylesheet" type="text/css" />
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/7.0.1/css/all.min.css"
+        integrity="sha512-2SwdPD6INVrV/lHTZbO2nodKhrnDdJK9/kg2XD1r9uGqPo1cUbujc+IYdlYdEErWNu69gVcYgdxlmVmzTWnetw=="
+        crossorigin="anonymous" referrerpolicy="no-referrer" />
+
+</head>
+<style>
+    @import url('https://fonts.googleapis.com/css2?family=Geist:wght@100..900&display=swap');
+
+    * {
+        font-family: "Geist", sans-serif;
+    }
+</style>
+
+<body class="pb-20 px-2 md:container mx-auto">
+    <section class="">
+        <footer class="mt-5">
+            <h1 class="text-[32px] font-bold">Job Application Tracker</h1>
+            <div class="grid grid-cols-1 md:grid-cols-3 justify-between gap-3 mt-4">
+                <div class="card  bg-base-100 card-lg shadow-sm border-t-1 border-gray-100 p-4">
+                    <h2>Total</h2>
+                    <h3 id="total_jobs" class="text-[24px] font-bold">0</h3>
+                </div>
+                <div class="card  bg-base-100 card-lg shadow-sm border-t-1 border-gray-100 p-4">
+                    <h2>Interview</h2>
+                    <h3 id="interview" class="text-[24px] font-bold text-green-400">0</h3>
+                </div>
+                <div class="card  bg-base-100 card-lg shadow-sm border-t-1 border-gray-100 p-4">
+                    <h2>Rejected</h2>
+                    <h3 id="rejected" class="text-[24px] font-bold text-red-500">0</h3>
+                </div>
+            </div>
+        </footer>
+        <hr class="mt-8 text-gray-300">
+
+    </section>
+    <section class=" mt-8">
+        <div class="flex justify-between text-center">
+            <h1 class="font-semibold text-[20px]">Available Jobs</h1>
+            <h4 class="text-[16px] "><span id="all_jobs">0</span> Jobs</h4>
+        </div>
+    </section>
+
+    <!-- control button -->
+
+    <section id="main_btn" class=" mt-8 space-x-3">
+        <button id="all_btn" onclick="show_only('All')"
+            class="main_btn rounded-sm w-20 md:w-28 shadow-sm border-t-1 border-gray-100 bg-blue-500 text-white py-2  text-[14px] hover:bg-blue-200 hover:text-black">All</button>
+        <button id="int_btn"
+            class="main_btn rounded-sm w-20 md:w-28 shadow-sm border-t-1 border-gray-100 py-2 text-[#64748B] text-[14px] hover:bg-blue-200 hover:text-black">Interview</button>
+        <button id="rej_btn"
+            class="main_btn rounded-sm w-20 md:w-28 shadow-sm border-t-1 border-gray-100 py-2 text-[#64748B] text-[14px] hover:bg-blue-200 hover:text-black">Rejected</button>
+    </section>
+
+
+
+
+
+    <!-- cart section  -->
+    <section id="card_main_container" class=" mt-8 space-y-3">
+
+        <!-- card div -->
+        <div class="main_cart p-2 md:p-8 bg-base-100 rounded-md card-lg shadow-sm border-t-1 border-gray-100">
+            <div class="flex justify-between items-center">
+                <div>
+                    <h1 class="cart_name text-[18] font-semibold">Mobile First Corp</h1>
+                    <h4 class="cart_rool text-[16] text-gray-500">React Native Developer</h4>
+                </div>
+                <button class="flex border-1 p-3 rounded-full border-gray-200 ">
+                    <i class="delete_btn fa-solid fa-trash-can"></i>
+                </button>
+            </div>
+            <h5 class="cart_cost text-[16] text-gray-500 py-6">Remote•Full-time•$130,000 - $175,000</h5>
+            <div class="bg-blue-100 rounded-sm text-center py-2 w-40 statuss">Not Applied</div>
+            <h5 class="cart_details text-[16] text-gray-500 py-6">Build cross-platform mobile applications using React
+                Native. Work
+                on products used by millions of users
+                worldwide.</h5>
+
+            <!-- cart button -->
+            <button
+                class="text-green-400 int_card_btn border-green-400 border-1 rounded-sm py-1 px-4 hover:bg-green-400 hover:text-white">Interview</button>
+            <button
+                class="text-red-400 rej_card_btn border-red-400 border-1 rounded-sm py-1 px-4 hover:bg-red-400 hover:text-white">Rejected</button>
+        </div>
+
+
+    </section>
+
+
+
+
+    <!-- no cart in list -->
+
+    <section id="hide" class="mt-8 hidden">
+        <div
+            class="flex items-center justify-center h-[500px] card  bg-base-100 card-lg shadow-sm border-t-1 border-gray-100">
+            <div class="text-center">
+                <img class="h-[200px] mx-auto" src="asset/jobs.png" alt="">
+                <h1 class="text-[24px] font-semibold">No jobs available</h1>
+                <p class="text-[16px] text-[#64748B]">Check back soon for new job opportunities</p>
+            </div>
+        </div>
+    </section>
+
+
+    <section id="all-interview" class="hidden"></section>
+    <section id="all-rejected" class="hidden"></section>
+
+
+
+</body>
+
+<script src="script/index.js"></script>
+
+</html>

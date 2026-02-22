@@ -4,7 +4,7 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Document</title>
+    <title>Assignment-4</title>
     <script src="https://cdn.jsdelivr.net/npm/@tailwindcss/browser@4"></script>
     <link href="https://cdn.jsdelivr.net/npm/daisyui@5" rel="stylesheet" type="text/css" />
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/7.0.1/css/all.min.css"
@@ -52,11 +52,11 @@
     <!-- control button -->
 
     <section id="main_btn" class=" mt-8 space-x-3">
-        <button id="all_btn" onclick="show_only('All')"
+        <button id="all_btn" onclick="show_only('all')"
             class="main_btn rounded-sm w-20 md:w-28 shadow-sm border-t-1 border-gray-100 bg-blue-500 text-white py-2  text-[14px] hover:bg-blue-200 hover:text-black">All</button>
-        <button id="int_btn"
+        <button id="int_btn" onclick="show_only('Interview')"
             class="main_btn rounded-sm w-20 md:w-28 shadow-sm border-t-1 border-gray-100 py-2 text-[#64748B] text-[14px] hover:bg-blue-200 hover:text-black">Interview</button>
-        <button id="rej_btn"
+        <button id="rej_btn" onclick="show_only('Rejected')"
             class="main_btn rounded-sm w-20 md:w-28 shadow-sm border-t-1 border-gray-100 py-2 text-[#64748B] text-[14px] hover:bg-blue-200 hover:text-black">Rejected</button>
     </section>
 
@@ -73,8 +73,8 @@
                     <h1 class="cart_name text-[18] font-semibold">TechNova Solutions</h1>
                     <h4 class="cart_rool text-[16] text-gray-500">Frontend Developer</h4>
                 </div>
-                <button class="flex border-1 p-3 rounded-full border-gray-200 ">
-                    <i class="delete_btn fa-solid fa-trash-can"></i>
+                <button class="delete_btn flex border-1 p-3 rounded-full border-gray-200 ">
+                    <i class=" fa-solid fa-trash-can"></i>
                 </button>
             </div>
             <h5 class="cart_cost text-[16] text-gray-500 py-6">Onsite•Full-time•$70,000 - $90,000</h5>
@@ -95,8 +95,8 @@
                     <h1 class="cart_name text-[18] font-semibold">CloudEdge Inc</h1>
                     <h4 class="cart_rool text-[16] text-gray-500">Cloud Engineer</h4>
                 </div>
-                <button class="flex border-1 p-3 rounded-full border-gray-200 ">
-                    <i class="delete_btn fa-solid fa-trash-can"></i>
+                <button class="delete_btn flex border-1 p-3 rounded-full border-gray-200 ">
+                    <i class="fa-solid fa-trash-can"></i>
                 </button>
             </div>
             <h5 class="cart_cost text-[16] text-gray-500 py-6">Remote•Full-time•$110,000 - $140,000</h5>
@@ -117,8 +117,8 @@
                     <h1 class="cart_name text-[18] font-semibold">DataWave Analytics</h1>
                     <h4 class="cart_rool text-[16] text-gray-500">Data Analyst</h4>
                 </div>
-                <button class="flex border-1 p-3 rounded-full border-gray-200 ">
-                    <i class="delete_btn fa-solid fa-trash-can"></i>
+                <button class="delete_btn flex border-1 p-3 rounded-full border-gray-200 ">
+                    <i class=" fa-solid fa-trash-can"></i>
                 </button>
             </div>
             <h5 class="cart_cost text-[16] text-gray-500 py-6">Hybrid•Full-time•$65,000 - $85,000</h5>
@@ -139,8 +139,8 @@
                     <h1 class="cart_name text-[18] font-semibold">CyberShield Ltd</h1>
                     <h4 class="cart_rool text-[16] text-gray-500">Cyber Security Engineer</h4>
                 </div>
-                <button class="flex border-1 p-3 rounded-full border-gray-200 ">
-                    <i class="delete_btn fa-solid fa-trash-can"></i>
+                <button class="delete_btn flex border-1 p-3 rounded-full border-gray-200 ">
+                    <i class="fa-solid fa-trash-can"></i>
                 </button>
             </div>
             <h5 class="cart_cost text-[16] text-gray-500 py-6">Onsite•Full-time•$95,000 - $120,000</h5>
@@ -161,8 +161,8 @@
                     <h1 class="cart_name text-[18] font-semibold">NextGen AI</h1>
                     <h4 class="cart_rool text-[16] text-gray-500">Machine Learning Engineer</h4>
                 </div>
-                <button class="flex border-1 p-3 rounded-full border-gray-200 ">
-                    <i class="delete_btn fa-solid fa-trash-can"></i>
+                <button class="delete_btn flex border-1 p-3 rounded-full border-gray-200 ">
+                    <i class=" fa-solid fa-trash-can"></i>
                 </button>
             </div>
             <h5 class="cart_cost text-[16] text-gray-500 py-6">Remote•Contract•$120,000 - $150,000</h5>
@@ -183,8 +183,8 @@
                     <h1 class="cart_name text-[18] font-semibold">FinCore Systems</h1>
                     <h4 class="cart_rool text-[16] text-gray-500">Backend Developer</h4>
                 </div>
-                <button class="flex border-1 p-3 rounded-full border-gray-200 ">
-                    <i class="delete_btn fa-solid fa-trash-can"></i>
+                <button class="delete_btn flex border-1 p-3 rounded-full border-gray-200 ">
+                    <i class=" fa-solid fa-trash-can"></i>
                 </button>
             </div>
             <h5 class="cart_cost text-[16] text-gray-500 py-6">Hybrid•Full-time•$85,000 - $105,000</h5>
@@ -204,8 +204,8 @@
                     <h1 class="cart_name text-[18] font-semibold">AppWorks Studio</h1>
                     <h4 class="cart_rool text-[16] text-gray-500">Flutter Developer</h4>
                 </div>
-                <button class="flex border-1 p-3 rounded-full border-gray-200 ">
-                    <i class="delete_btn fa-solid fa-trash-can"></i>
+                <button class="delete_btn flex border-1 p-3 rounded-full border-gray-200 ">
+                    <i class=" fa-solid fa-trash-can"></i>
                 </button>
             </div>
             <h5 class="cart_cost text-[16] text-gray-500 py-6">Remote•Full-time•$75,000 - $95,000</h5>
@@ -226,8 +226,8 @@
                     <h1 class="cart_name text-[18] font-semibold">DevSphere Technologies</h1>
                     <h4 class="cart_rool text-[16] text-gray-500">Full Stack Developer</h4>
                 </div>
-                <button class="flex border-1 p-3 rounded-full border-gray-200 ">
-                    <i class="delete_btn fa-solid fa-trash-can"></i>
+                <button class="delete_btn flex border-1 p-3 rounded-full border-gray-200 ">
+                    <i class=" fa-solid fa-trash-can"></i>
                 </button>
             </div>
             <h5 class="cart_cost text-[16] text-gray-500 py-6">Onsite•Full-time•$90,000 - $115,000</h5>
